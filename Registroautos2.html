@@ -1,0 +1,253 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Registro de tu atuto </TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--
+
+
+
+function runTest(form, button)  {
+
+	Ret = false;
+
+	if (button.name == "1") Ret = testBox1(form);
+
+	if (button.name == "2") Ret = testBox2(form);
+
+	if (button.name == "3") Ret = testBox3(form);
+
+	if (button.name == "4") Ret = testBox4(form);
+
+	if(button.name== "5") Ret= testBox5(form);
+
+	if (Ret)
+
+		alert ("Campo correcto!");
+
+}
+
+
+
+function testBox1(form) {
+
+	Ctrl = form.campo1;
+
+	if (Ctrl.value == "" || Ctrl.value.indexOf ('@', 0) == -1) {
+
+		validatePrompt (Ctrl, "Entrar un E-mail")
+
+		return (false);
+
+	} else
+
+		return (true);
+
+}
+
+
+
+function testBox2(form) {
+
+	Ctrl = form.campo2;
+
+	if (Ctrl.value.length != 20) {
+
+		validatePrompt (Ctrl, "Entrar cinco caracteres")
+
+		return (false);
+
+	} else
+
+		return (true);
+
+}
+
+
+
+function testBox3(form) {
+
+	Ctrl = form.campo3;
+
+	if (Ctrl.value.length < 20) {
+
+		validatePrompt (Ctrl, "Entrar tres o mas caracteres")
+
+		return (false);
+
+	} else
+
+		return (true);
+
+}
+
+
+
+function testBox4(form) {
+
+	Ctrl = form.campo4;
+
+	if (Ctrl.value == "") {
+
+		validatePrompt (Ctrl, "Entrar cualquier cosa")
+
+		return (false);
+
+	} else
+
+		return (true);
+
+}
+
+function testBox5(form){
+	Ctrl= form.campo5;
+	if(Ctrl.value==!){
+		validatePrompt (Ctrl, "Entrar cualquier cosa")
+
+		return (false);
+
+	} else
+
+		return (true);
+	}
+}
+
+
+function runSubmit (form, button)  {
+
+	if (!testBox1(form)) return;
+
+	if (!testBox2(form)) return;
+
+	if (!testBox3(form)) return;
+
+	if (!testBox4(form)) return;
+
+	if(!testBox5(form)) return;
+
+	alert ("Todos los campos OK! Se procede a enviar");
+
+	document.test.submit();	
+
+}
+
+
+
+function validatePrompt (Ctrl, PromptStr) {
+
+	alert (PromptStr)
+
+	Ctrl.focus();
+
+	return;
+
+}
+
+
+
+
+
+function loadDoc() {
+
+	// initial focus; use if needed
+
+	document.test.campo1.focus ();
+
+	return;
+
+}
+
+//-->
+
+</SCRIPT>
+
+</HEAD>
+
+<BODY  bgcolor="white" onLoad="loadDoc()">
+
+<CENTER>
+
+<H3>Registra tu auto.</H3></CENTER>
+
+<center>
+
+<FORM NAME="CONFIRMAR" ACTION="http://mecaniza.sestud.uv.es/cgi-bin/test2-cgi" METHOD=GET>
+
+<table border>
+<tr>
+    <td>Entra tu E-mail para seguridad:</td>
+
+    <td><INPUT TYPE="text" NAME="campo1"></td>
+
+    <td><INPUT TYPE="button" NAME="1" VALUE="CONFIRMAR" 
+         onClick="runTest(this.form, this)"></td>
+</tr>
+<tr>
+    <td>Marca de tu Auto: </td>
+
+    <td><INPUT TYPE="text" NAME="campo2"></td>
+
+    <td><INPUT TYPE="button" NAME="2" VALUE="CONFIRMAR" 
+         onClick="runTest(this.form, this)"></td>
+
+</tr>
+<tr>
+
+
+    <td>Modelo de tu auto:</td>
+
+    <td><INPUT TYPE="text" NAME="campo3"></td>
+
+    <td><INPUT TYPE="button" NAME="3" VALUE="CONFIRMAR" 
+         onClick="runTest(this.form, this)"></td>
+</tr>
+<tr>
+    <td>Precio Por que lo vendes:</td>
+
+    <td><INPUT TYPE="text" NAME="campo4"></td>
+
+    <td><INPUT TYPE="button" NAME="4" VALUE="CONFIRMAR" 
+        onClick="runTest(this.form, this)"></td>
+</tr>
+<tr>
+	<td>Observaciones</td>
+
+	<td><INPUT TYPE="text" NAME="5"></td>
+
+	<td><INPUT TYPE="button" NAME="5" VALUE="CONFIRMAR"
+		onClick="runTest(this.form, this"></td>
+<tr>
+    <td align=center><INPUT TYPE="button" NAME="Tfin" VALUE="Envio final + envio" onClick="runSubmit(this.form, this)"></td>
+    <td align=center><input type="reset" name="reset" 
+         value="Inicializar" onClick="this.form.campo1.value = ''"></td>
+</tr>
+
+</FORM>
+
+</table>
+
+</center>
+
+<h1 align="center"> Tu eliges si quieres vender Tu auto o no!</h1>
+
+<h5>Aqui todos los usuarios son libres</h5>
+<hr>
+<center>
+<h3>
+<a href="28.html">Pagina Incial</a>
+<a href="file:///E:/Papginas%20web/+-/registro1.html">Registro cliente</a></li>
+</center>
+
+</BODY>
+<footer>
+<h3> Aviso de privacidad</h3>
+<p aling="left">En AUTO IDEAL, SA DE CV  (El Distribuidor), con domicilio en Blvd. López  Mateos No. 3003, Col Obrera, C.P. 89050, Tampico, Tamps.  La información de nuestros clientes es tratada de forma estrictamente confidencial por lo que al proporcionar sus datos personales, consiente su tratamiento con las siguientes finalidades: (i) Proveerle un bien y/o servicio, (ii) dar cumplimiento a requerimientos legales, (iii) realizar actividades mercadotécnicas y promoción en general, (iv) ofrecerle nuestros productos, servicios e información de nuestros socios de negocios, (v) análisis estadísticos, de mercado y prospección comercial así como (vi) mantener actualizados nuestros registros. Para conocer el texto completo del aviso de privacidad para clientes y clientes potenciales de El Distribuidor favor de consultar nuestra página en internet www.elcompi.com.mx</p>
+</h3>
+</footer>
+
+
+</HTML>
+
